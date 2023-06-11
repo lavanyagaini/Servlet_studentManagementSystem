@@ -36,8 +36,8 @@ public Student loginStudent(String email,String password) {
 	boolean value=false;
 	for(Student student:list) {
 		if(student.getEmail().equals(email)) {
-		javax.persistence.Query query1=entityManager.createQuery("select a from Student a where a.email=?2");
-		query1.setParameter(2, email);
+		javax.persistence.Query query1=entityManager.createQuery("select a from Student a where a.email=?1");
+		query1.setParameter(1, email);
 	     Student dbStudent=(Student) query1.getSingleResult();
 	     
 	return dbStudent;
